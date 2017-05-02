@@ -1,17 +1,21 @@
-Apache Spark
+# Apache Spark
+...
 
-Install 'twitter4j' Dependencies:
+## SparkStreaming
 
-Add the 'twitter4j-core-4.0.4.jar' from 'librarys/twitter4j-4.0.4/lib/twitter4j-core-4.0.4.jar' to the Java Build Path. 
+Die Anwendung Twitter liest die Autoren von abgesetzten Tweets ab und schreibt diese in eine Datenbank. Die Datenbank läuft in einem Docker Container und muss vor dem Start der Anwendung gestartet werden.
 
-docker installieren
+### Vorbereitungen zur Verwendung des Dockers:
+- [Docker](https://www.docker.com/) herunterladen und installieren
+- mySql Docker Repository laden: `docker pull mysql`
 
-docker pull mysql
-
-in ordner navigieren
+### Starten des Dockers / der Datenbank:
+`docker-compose -f docker-compose.yml up`
 
 docker network create local
 
-docker-compose -f docker-compose.yml up
 
+
+## GraphX
+...
 
