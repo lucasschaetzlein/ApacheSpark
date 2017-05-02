@@ -1,15 +1,20 @@
-Apache Spark
+# Apache Spark
 
-1. Git Repository clonen
-2. Docker herunterladen und installieren
-3. mySql Docker Repository laden: 'docker pull mysql'
-4. in das Projektverzeichnis navigieren
+## SparkStreaming
 
-Starten des Dockers
-docker-compose -f docker-compose.yml up
+Die Anwendung Twitter liest die Autoren von abgesetzten Tweets ab und schreibt diese in eine Datenbank. Die Datenbank läuft in einem Docker Container und muss vor dem Start der Anwendung gestartet werden.
+
+### Vorbereitungen zur Verwendung des Dockers:
+- Docker herunterladen und installieren
+- mySql Docker Repository laden: `docker pull mysql`
+
+### Starten des Dockers / der Datenbank:
+`docker-compose -f docker-compose.yml up`
 
 docker network create local
 
-docker-compose -f docker-compose.yml up
 
+
+## GraphX
+...
 
