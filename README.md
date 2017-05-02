@@ -1,14 +1,12 @@
 Apache Spark
 
-Install 'twitter4j' Dependencies:
+1. Git Repository clonen
+2. Docker herunterladen und installieren
+3. mySql Docker Repository laden: 'docker pull mysql'
+4. in das Projektverzeichnis navigieren
 
-Add the 'twitter4j-core-4.0.4.jar' from 'librarys/twitter4j-4.0.4/lib/twitter4j-core-4.0.4.jar' to the Java Build Path. 
-
-docker installieren
-
-docker pull mysql
-
-in ordner navigieren
+Starten des Dockers
+docker-compose -f docker-compose.yml up
 
 docker network create local
 
