@@ -8,7 +8,7 @@ import java.util.Properties
 //import org.apache.spark.sql.SQLContext.implicits._
 import org.apache.spark._
 import org.apache.spark.sql._
-import org.apache.spark.sql.types._
+//import org.apache.spark.sql.types._
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 import java.sql.{Connection, DriverManager, ResultSet}
