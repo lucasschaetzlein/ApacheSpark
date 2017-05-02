@@ -5,20 +5,25 @@ import org.apache.spark.SparkConf
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.SparkContext
 import java.util.Properties
-import java.sql.DriverManager
-import java.sql.PreparedStatement
 //import org.apache.spark.sql.SQLContext.implicits._
 import org.apache.spark._
 import org.apache.spark.sql._
 //import org.apache.spark.sql.types._
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+import java.sql.{Connection, DriverManager, ResultSet}
 
-object TwitterStream {
-  def main(args: Array[String]) = {
+
+object Twitter {
+  def main(args: Array[String]){
    //libraryDependencies ++= (Seq"org.apache.spark" % "spark-streaming-twitter_2.11" % "2.0")
-    
-   /*val url = "jdbc:db2://dashdb-entry-yp-dal09-10.services.dal.bluemix.net:50000/BLUDB"
-   val user = "dash7107"
-   val pw = "1D4Sjrcw4S5o"
+   Logger.getLogger("org").setLevel(Level.OFF)
+   Logger.getLogger("akka").setLevel(Level.OFF)  
+  
+  
+   val url = "jdbc:mysql://127.0.0.1:3306/twitter"
+   val user = "admin"
+   val pw = "admin"
 
    val con = DriverManager.getConnection(url, user, pw)
     //if(con != null){
@@ -26,9 +31,12 @@ object TwitterStream {
     //}
 
    val SQL="insert into twitter values (?)"
-   val ps = con.prepareStatement(SQL)*/
+   val ps = con.prepareStatement(SQL)
+   
+  
     
-   val sc = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[16]")
+   val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[16]")
+   val sc = new SparkContext(sparkConf)
    val ssc = new StreamingContext(sc, Seconds(2))
 
    val consumerKey = "skEDCX0PnJ1iinYJHpKhkEPgl";
@@ -43,8 +51,9 @@ object TwitterStream {
    
    
 
-    val filters = Array("UnboxYourPhone", "Samsung")
-    val stream = TwitterUtils.createStream(ssc, None, filters)
+   val filters = Array("UnboxYourPhone", "Samsung")
+   val stream = TwitterUtils.createStream(ssc, None, filters)
+    //val stream = scc.twitterStream()
     val users = stream.map(status => status.getUser.getName)
     users.print()
 
@@ -77,16 +86,19 @@ object TwitterStream {
         .saveAsTable("twitter")
 */
    
- /* users.foreachRDD(rdd => {
-      println("\nNumber of users in last 60 seconds (%s total):".format(rdd.count()))
-      rdd.foreach{
-        case ("") => println("ende")
-        val singleUser = format(user)
-        ps.setString(1, user)
-        ps.execute()
-        println("Inserted Twitter User into DB: ")
-        }
-     })*/
+  val tweets = stream.foreachRDD{
+    rdd => rdd.foreachPartition {
+      it =>
+      val conn = DriverManager.getConnection(url,user,pw)
+      val del = conn.prepareStatement("INSERT INTO twitter (user) VALUES (?)")
+      for (tuple <- it) {
+      del.setString(1, tuple.getUser.getName)
+      
+      del.executeUpdate
+    }
+      conn.close()
+    }
+  }
 
    ssc.start()
    ssc.awaitTermination()
