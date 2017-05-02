@@ -206,7 +206,6 @@ INDEX VERSION 1.129+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/.meta
 3558559563.index
 241167326.index
 924056973.index
-2483410584.index
 2576446912.index
 1954352002.index
 3287014255.index
