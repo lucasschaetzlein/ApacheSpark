@@ -20,16 +20,16 @@ object Twitter {
     val url = "jdbc:mysql://127.0.0.1:3306/twitter"
     val user = "admin"
     val pw = "admin"
-
+/*
     val con = DriverManager.getConnection(url, user, pw)
     if (con != null) {
       println("Verbindung zur Datenbank erfolgreich")
     }
-
+*/
     //Initializieren von Spark
     val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[16]")
     val sc = new SparkContext(sparkConf)
-    val ssc = new StreamingContext(sc, Seconds(2))
+    val ssc = new StreamingContext(sc, Seconds(1))
 
     //Twitter Credentials für die Verbindung zur Twitter API
     val consumerKey = "skEDCX0PnJ1iinYJHpKhkEPgl";
@@ -41,12 +41,43 @@ object Twitter {
     System.setProperty("twitter4j.oauth.accessToken", accessToken)
     System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
 
-    val filters = Array("UnboxYourPhone", "Samsung")
-    val stream = TwitterUtils.createStream(ssc, None, filters)
-    //val stream = scc.twitterStream()
-    val users = stream.map(status => status.getUser.getName)
-    users.print()
-
+    val filters = Array("chrisist1depp")
+    val stream = TwitterUtils.createStream(ssc, None)
+    
+    
+    //Hier folgt Analyse der Tweets
+    
+    //val users = stream.map(status => status)
+    //users.print()
+    
+    tweetLength();
+    
+    //Anzahl der Tweets in einem bestimmen Zeitraum zu einem bestimmten Thema
+    //tbd
+    
+    //Ausgabe der durchscnittlichen Länge der Tweets zu einem bestimmten Zeitraum
+    def tweetLength() = {
+      var tweetCount = 0;
+      var overallTweetLength = 0;
+      val tweets = stream.foreachRDD {
+        rdd =>
+           for (tuple <- rdd) {
+             var tweetLength = tuple.getText.length
+             overallTweetLength += tweetLength;
+             tweetCount += 1;
+             //println(tuple.getUser.getName+" | "+tweetLength);
+             println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" | Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
+             //println("-------------------------------------------------");
+           }
+      }
+    }
+    
+    //Beliebtesten Hashtags über einen Zeitraum
+    
+    //Analyse der Tweets auf Freundlichkeit (Wörter zählen)  
+    
+    
+/*
     //Speichern der Tweet Autoren in der Datenbank
     val tweets = stream.foreachRDD {
       rdd =>
@@ -61,9 +92,10 @@ object Twitter {
             conn.close()
         }
     }
-
+*/
     ssc.start()
-    ssc.awaitTermination()
+    ssc.awaitTerminationOrTimeout(10000)
     //ssc.stop()
+    
   }
 }
