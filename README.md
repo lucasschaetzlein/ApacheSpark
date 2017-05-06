@@ -16,7 +16,7 @@ Es besteht die Möglichkeit die Ergebnisse in einer Datenbank zu speichern. Die 
 - mySql Docker Repository laden: `docker pull mysql`
 
 ### Starten des Dockers / der Datenbank:
-`docker-compose -f docker-compose.yml up`
+`docker-compose -f docker-compose.yml up` <br>
 ggf: `docker network create local`
 
 
