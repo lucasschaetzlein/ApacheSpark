@@ -7,7 +7,7 @@ Die Anwendung [Twitter.scala](https://github.com/lucasschaetzlein/ApacheSpark/bl
 
 1. Anzahl der abgesetzten Tweets
 2. Durchschnittliche Zeichenlänge der abgesetzten Tweets 
-3. Die beliebtesten Tweets
+3. Die beliebtesten Hashtags der letzten abgesetzten Tweets
 
 Es besteht die Möglichkeit die Ergebnisse in einer Datenbank zu speichern. Die Datenbank läuft in einem Docker Container und muss vor dem Start der Anwendung gestartet werden.
 
