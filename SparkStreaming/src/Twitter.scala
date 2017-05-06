@@ -38,7 +38,7 @@ object Twitter {
     //Initializieren von Spark
     val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[1]")
     val sc = new SparkContext(sparkConf)
-    val ssc = new StreamingContext(sc, Seconds(1))
+    val ssc = new StreamingContext(sc, Seconds(5))
 
     //Twitter Credentials für die Verbindung zur Twitter API
     val consumerKey = "skEDCX0PnJ1iinYJHpKhkEPgl";
@@ -58,8 +58,9 @@ object Twitter {
     //val users = stream.map(status => status)
     //users.print()
     
-    numberOfTweets
-    //tweetLength();
+    //numberOfTweets
+    tweetLength();
+    //mostPopularHashTags
     
     //Anzahl der Tweets in einem bestimmen Zeitraum zu einem bestimmten Thema
     def numberOfTweets() = {
@@ -71,7 +72,7 @@ object Twitter {
       }
     }
     
-    //Ausgabe der durchscnittlichen Länge der Tweets zu einem bestimmten Zeitraum
+    //Ausgabe der durchschnittlichen Länge der Tweets zu einem bestimmten Zeitraum
     def tweetLength() = {  
       val tweets = stream.foreachRDD {
         rdd =>
@@ -87,6 +88,29 @@ object Twitter {
     }
     
     //Beliebtesten Hashtags über einen Zeitraum
+    def mostPopularHashTags() = {
+      val hashTags = stream.flatMap(status => status.getHashtagEntities)
+      // Convert hashtag to (hashtag, 1) pair for future reduction.
+      val hashTagPairs = hashTags.map(hashtag => ("#" + hashtag.getText, 1))
+      // Use reduceByKeyAndWindow to reduce our hashtag pairs by summing their
+      // counts over the last 10 seconds of batch intervals (in this case, 2 RDDs).
+      val topCounts10 = hashTagPairs.reduceByKeyAndWindow((l, r) => {l + r}, Seconds(10))
+      
+      // topCounts10 will provide a new RDD for every window. Calling transform()
+      // on each of these RDDs gives us a per-window transformation. We use
+      // this transformation to sort each RDD by the hashtag counts. The FALSE
+      // flag tells the sortBy() function to sort in descending order.
+      val sortedTopCounts10 = topCounts10.transform(rdd => 
+      rdd.sortBy(hashtagPair => hashtagPair._2, false))
+  
+      // Print popular hashtags.
+      sortedTopCounts10.foreachRDD(rdd => {
+        val topList = rdd.take(10)
+        println("\nPopular topics in last 10 seconds (%s total):".format(rdd.count()))
+        topList.foreach{case (tag, count) => println("%s (%d tweets)".format(tag, count))}
+      })
+      
+    }
     
     //Analyse der Tweets auf Freundlichkeit (Wörter zählen)  
     
@@ -108,7 +132,7 @@ object Twitter {
     }
 */
     ssc.start()
-    ssc.awaitTerminationOrTimeout(20000)
+    ssc.awaitTerminationOrTimeout(40000)
     //ssc.stop()
     
   }
