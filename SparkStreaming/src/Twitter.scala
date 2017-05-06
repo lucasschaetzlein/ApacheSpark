@@ -12,22 +12,31 @@ import org.apache.log4j.Level
 import java.sql.{ Connection, DriverManager, ResultSet }
 
 object Twitter {
+   var tweetCount = 0;
+   var overallTweetLength = 0;
+      
   def main(args: Array[String]) {
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
 
-    //Herstellen einer Verbindung zur Datenbank
-    val url = "jdbc:mysql://127.0.0.1:3306/twitter"
-    val user = "admin"
-    val pw = "admin"
-/*
-    val con = DriverManager.getConnection(url, user, pw)
-    if (con != null) {
-      println("Verbindung zur Datenbank erfolgreich")
+    //connectToDB()
+    
+    def connectToDB(): Boolean = {
+      //Herstellen einer Verbindung zur Datenbank
+      val url = "jdbc:mysql://127.0.0.1:3306/twitter"
+      val user = "admin"
+      val pw = "admin"
+  
+      val con = DriverManager.getConnection(url, user, pw)
+      if (con != null) {
+        println("Verbindung zur Datenbank erfolgreich")
+        return true;
+      }
+      return false;
     }
-*/
+    
     //Initializieren von Spark
-    val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[16]")
+    val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[1]")
     val sc = new SparkContext(sparkConf)
     val ssc = new StreamingContext(sc, Seconds(1))
 
@@ -41,24 +50,29 @@ object Twitter {
     System.setProperty("twitter4j.oauth.accessToken", accessToken)
     System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
 
-    val filters = Array("chrisist1depp")
+    val filters = Array("Samsung")
     val stream = TwitterUtils.createStream(ssc, None)
-    
     
     //Hier folgt Analyse der Tweets
     
     //val users = stream.map(status => status)
     //users.print()
     
-    tweetLength();
+    numberOfTweets
+    //tweetLength();
     
     //Anzahl der Tweets in einem bestimmen Zeitraum zu einem bestimmten Thema
-    //tbd
+    def numberOfTweets() = {
+      val tweets = stream.foreachRDD {
+        rdd =>
+          var number = rdd.count
+          tweetCount += number.toInt
+          println("Number of Tweets: "+tweetCount);
+      }
+    }
     
     //Ausgabe der durchscnittlichen Länge der Tweets zu einem bestimmten Zeitraum
-    def tweetLength() = {
-      var tweetCount = 0;
-      var overallTweetLength = 0;
+    def tweetLength() = {  
       val tweets = stream.foreachRDD {
         rdd =>
            for (tuple <- rdd) {
@@ -66,7 +80,7 @@ object Twitter {
              overallTweetLength += tweetLength;
              tweetCount += 1;
              //println(tuple.getUser.getName+" | "+tweetLength);
-             println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" | Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
+             println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" <== Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
              //println("-------------------------------------------------");
            }
       }
@@ -94,7 +108,7 @@ object Twitter {
     }
 */
     ssc.start()
-    ssc.awaitTerminationOrTimeout(10000)
+    ssc.awaitTerminationOrTimeout(20000)
     //ssc.stop()
     
   }
