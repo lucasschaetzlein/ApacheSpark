@@ -30,3 +30,100 @@ when weaving classes
 when weaving 
  [Xlint:cantFindType]
 2017-05-02 12:48:16,771  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-05-07 20:19:34,098 ERROR [main] - System.err - [org.eclipse.jdt.launching] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.launching.JavaRuntime
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-05-07 20:19:36,276  WARN [main] - ScalaProject - Project SparkStreaming has platform default sourceLevel.
+2017-05-07 20:19:36,277  WARN [main] - ScalaProject - Project SparkStreaming runs on platform default installation.
+2017-05-07 20:19:36,290  WARN [main] - ScalaProject - Project SparkStreaming has platform default sourceLevel.
+2017-05-07 20:19:36,291  WARN [main] - ScalaProject - Project SparkStreaming runs on platform default installation.
+2017-05-07 20:19:49,146 ERROR [main] - System.err - [org.eclipse.jdt.debug.ui] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-05-07 20:19:49,306 ERROR [main] - System.err - [org.eclipse.jdt.debug] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.debug.core.IJavaHotCodeReplaceListener
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-05-07 20:19:55,940 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:19:55,958 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:19:55,962 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:21:42,899  WARN [ModalContext] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:21:42,900  WARN [ModalContext] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:21:43,723  WARN [ModalContext] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:21:43,723  WARN [ModalContext] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:21:45,863  WARN [Worker-16] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:21:45,863  WARN [Worker-16] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:21:46,926  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-05-07 20:21:49,331  WARN [Worker-13] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:21:49,331  WARN [Worker-13] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:22:31,011 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:22:31,013 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:22:39,536 ERROR [main] - System.err - [org.eclipse.jdt.junit] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.junit.ui.JUnitQuickFixProcessor
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-05-07 20:23:04,893  WARN [Worker-16] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:23:04,893  WARN [Worker-16] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:25:18,460  WARN [Worker-0] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:25:18,462  WARN [Worker-0] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:25:43,592  WARN [Worker-4] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:25:43,597  WARN [Worker-4] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:25:43,732  WARN [Worker-17] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:25:43,733  WARN [Worker-17] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:25:44,312  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:25:44,312  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:25:47,189  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-05-07 20:25:47,298 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:25:47,298 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:25:47,299 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-05-07 20:25:48,823  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-05-07 20:28:55,444  WARN [Worker-20] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:28:55,446  WARN [Worker-20] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:29:18,506  WARN [Worker-2] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:29:18,509  WARN [Worker-2] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:29:24,840  WARN [Worker-17] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:29:24,840  WARN [Worker-17] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:29:49,142  WARN [Worker-20] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:29:49,143  WARN [Worker-20] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:30:34,471  WARN [Worker-19] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:30:34,477  WARN [Worker-19] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:30:45,774  WARN [Worker-17] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:30:45,775  WARN [Worker-17] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:31:52,323  WARN [Worker-0] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:31:52,326  WARN [Worker-0] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:32:13,596  WARN [Worker-18] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:32:13,597  WARN [Worker-18] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:32:31,994  WARN [Worker-16] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:32:31,995  WARN [Worker-16] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:33:26,166  WARN [Worker-2] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:33:26,167  WARN [Worker-2] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:35:20,131  WARN [Worker-2] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:35:20,135  WARN [Worker-2] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:35:30,687  WARN [Worker-17] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:35:30,687  WARN [Worker-17] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:35:30,808  WARN [Worker-14] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:35:30,808  WARN [Worker-14] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:35:31,705  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:35:31,705  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:38:59,532  WARN [Worker-18] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:38:59,535  WARN [Worker-18] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:41:55,107  WARN [Worker-17] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:41:55,107  WARN [Worker-17] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:41:55,288  WARN [Worker-16] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:41:55,289  WARN [Worker-16] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:41:56,203  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:41:56,203  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:42:57,279  WARN [Worker-22] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:42:57,281  WARN [Worker-22] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:44:11,777  WARN [Worker-16] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-05-07 20:44:11,780  WARN [Worker-16] - ScalaProject - Project GraphX runs on platform default installation.
+2017-05-07 20:44:12,126  WARN [Worker-16] - ScalaProject - Project SparkStreaming has platform default sourceLevel.
+2017-05-07 20:44:12,126  WARN [Worker-16] - ScalaProject - Project SparkStreaming runs on platform default installation.
+2017-05-07 20:44:12,134  WARN [Worker-16] - ScalaProject - Project SparkStreaming has platform default sourceLevel.
+2017-05-07 20:44:12,134  WARN [Worker-16] - ScalaProject - Project SparkStreaming runs on platform default installation.
