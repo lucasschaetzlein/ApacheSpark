@@ -21,5 +21,9 @@ ggf: `docker network create local`
 
 
 ## GraphX
-...
 
+Die Anwendung [FlightData.scala](https://github.com/lucasschaetzlein/ApacheSpark/blob/master/GraphX/src/FlightData.scala) baut anhand von Daten über Flughäfen und Flugrouten einen Graphen auf. Nachdem der Graph generiert wurde kann dieser analysiert werden. Folgende Methoden zur Analyse werden durch die Anwendung bereitgestellt.
+
+1. Anzahl der Flughäfen
+2. Anzahl der Flüge zwischen zwei Flughäfen
+3. Top 10 Flüge zwischen zwei Flughäfen
