@@ -12,24 +12,33 @@ import org.apache.log4j.Level
 import java.sql.{ Connection, DriverManager, ResultSet }
 
 object Twitter {
+   var tweetCount = 0;
+   var overallTweetLength = 0;
+      
   def main(args: Array[String]) {
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
 
-    //Herstellen einer Verbindung zur Datenbank
-    val url = "jdbc:mysql://127.0.0.1:3306/twitter"
-    val user = "admin"
-    val pw = "admin"
-/*
-    val con = DriverManager.getConnection(url, user, pw)
-    if (con != null) {
-      println("Verbindung zur Datenbank erfolgreich")
+    //connectToDB()
+    
+    def connectToDB(): Boolean = {
+      //Herstellen einer Verbindung zur Datenbank
+      val url = "jdbc:mysql://127.0.0.1:3306/twitter"
+      val user = "admin"
+      val pw = "admin"
+  
+      val con = DriverManager.getConnection(url, user, pw)
+      if (con != null) {
+        println("Verbindung zur Datenbank erfolgreich")
+        return true;
+      }
+      return false;
     }
-*/
+    
     //Initializieren von Spark
-    val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[16]")
+    val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[1]")
     val sc = new SparkContext(sparkConf)
-    val ssc = new StreamingContext(sc, Seconds(1))
+    val ssc = new StreamingContext(sc, Seconds(5))
 
     //Twitter Credentials für die Verbindung zur Twitter API
     val consumerKey = "skEDCX0PnJ1iinYJHpKhkEPgl";
@@ -41,24 +50,30 @@ object Twitter {
     System.setProperty("twitter4j.oauth.accessToken", accessToken)
     System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
 
-    val filters = Array("chrisist1depp")
+    val filters = Array("Samsung")
     val stream = TwitterUtils.createStream(ssc, None)
-    
     
     //Hier folgt Analyse der Tweets
     
     //val users = stream.map(status => status)
     //users.print()
     
+    //numberOfTweets
     tweetLength();
+    //mostPopularHashTags
     
     //Anzahl der Tweets in einem bestimmen Zeitraum zu einem bestimmten Thema
-    //tbd
+    def numberOfTweets() = {
+      val tweets = stream.foreachRDD {
+        rdd =>
+          var number = rdd.count
+          tweetCount += number.toInt
+          println("Number of Tweets: "+tweetCount);
+      }
+    }
     
-    //Ausgabe der durchscnittlichen Länge der Tweets zu einem bestimmten Zeitraum
-    def tweetLength() = {
-      var tweetCount = 0;
-      var overallTweetLength = 0;
+    //Ausgabe der durchschnittlichen Länge der Tweets zu einem bestimmten Zeitraum
+    def tweetLength() = {  
       val tweets = stream.foreachRDD {
         rdd =>
            for (tuple <- rdd) {
@@ -66,13 +81,36 @@ object Twitter {
              overallTweetLength += tweetLength;
              tweetCount += 1;
              //println(tuple.getUser.getName+" | "+tweetLength);
-             println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" | Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
+             println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" <== Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
              //println("-------------------------------------------------");
            }
       }
     }
     
     //Beliebtesten Hashtags über einen Zeitraum
+    def mostPopularHashTags() = {
+      val hashTags = stream.flatMap(status => status.getHashtagEntities)
+      // Convert hashtag to (hashtag, 1) pair for future reduction.
+      val hashTagPairs = hashTags.map(hashtag => ("#" + hashtag.getText, 1))
+      // Use reduceByKeyAndWindow to reduce our hashtag pairs by summing their
+      // counts over the last 10 seconds of batch intervals (in this case, 2 RDDs).
+      val topCounts10 = hashTagPairs.reduceByKeyAndWindow((l, r) => {l + r}, Seconds(10))
+      
+      // topCounts10 will provide a new RDD for every window. Calling transform()
+      // on each of these RDDs gives us a per-window transformation. We use
+      // this transformation to sort each RDD by the hashtag counts. The FALSE
+      // flag tells the sortBy() function to sort in descending order.
+      val sortedTopCounts10 = topCounts10.transform(rdd => 
+      rdd.sortBy(hashtagPair => hashtagPair._2, false))
+  
+      // Print popular hashtags.
+      sortedTopCounts10.foreachRDD(rdd => {
+        val topList = rdd.take(10)
+        println("\nPopular topics in last 10 seconds (%s total):".format(rdd.count()))
+        topList.foreach{case (tag, count) => println("%s (%d tweets)".format(tag, count))}
+      })
+      
+    }
     
     //Analyse der Tweets auf Freundlichkeit (Wörter zählen)  
     
@@ -94,7 +132,7 @@ object Twitter {
     }
 */
     ssc.start()
-    ssc.awaitTerminationOrTimeout(10000)
+    ssc.awaitTerminationOrTimeout(40000)
     //ssc.stop()
     
   }
