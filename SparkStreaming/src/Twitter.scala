@@ -36,9 +36,9 @@ object Twitter {
     }
     
     //Initializieren von Spark
-    val sparkConf = new SparkConf().setAppName("TwitterPopularTags").setMaster("local[1]")
+    val sparkConf = new SparkConf().setAppName("TwitterStreaming").setMaster("local[4]")
     val sc = new SparkContext(sparkConf)
-    val ssc = new StreamingContext(sc, Seconds(5))
+    val ssc = new StreamingContext(sc, Seconds(1))
 
     //Twitter Credentials für die Verbindung zur Twitter API
     val consumerKey = "skEDCX0PnJ1iinYJHpKhkEPgl";
@@ -50,40 +50,46 @@ object Twitter {
     System.setProperty("twitter4j.oauth.accessToken", accessToken)
     System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
 
+    //Filter für die Tweets: Folgende Hahstags müssen enthalten sein
     val filters = Array("Samsung")
     val stream = TwitterUtils.createStream(ssc, None)
     
+    val startTime = System.currentTimeMillis
+    
     //Hier folgt Analyse der Tweets
     
-    //val users = stream.map(status => status)
-    //users.print()
+    //numberOfTweets()
+    //tweetLength()
+    mostPopularHashTags()
     
-    //numberOfTweets
-    tweetLength();
-    //mostPopularHashTags
-    
+  
     //Anzahl der Tweets in einem bestimmen Zeitraum zu einem bestimmten Thema
     def numberOfTweets() = {
       val tweets = stream.foreachRDD {
-        rdd =>
+        (rdd, time) =>
           var number = rdd.count
           tweetCount += number.toInt
-          println("Number of Tweets: "+tweetCount);
+          println("Number of Tweets of the last "+(time.milliseconds-startTime)/1000+" seconds: "+tweetCount);
       }
     }
     
     //Ausgabe der durchschnittlichen Länge der Tweets zu einem bestimmten Zeitraum
     def tweetLength() = {  
+      var averageTweetLength = 0
       val tweets = stream.foreachRDD {
-        rdd =>
+        (rdd, time) =>
            for (tuple <- rdd) {
              var tweetLength = tuple.getText.length
              overallTweetLength += tweetLength;
              tweetCount += 1;
              //println(tuple.getUser.getName+" | "+tweetLength);
-             println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" <== Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
+             //println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" <== Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
              //println("-------------------------------------------------");
            }
+           if(tweetCount != 0){
+             averageTweetLength = overallTweetLength/tweetCount
+           }
+           println("Durchschnittliche Länge der Tweets nach "+(time.milliseconds-startTime)/1000+" Sekunden: "+averageTweetLength+" Zeichen | Gesamtlänge aller Tweets: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
       }
     }
     
@@ -92,9 +98,10 @@ object Twitter {
       val hashTags = stream.flatMap(status => status.getHashtagEntities)
       // Convert hashtag to (hashtag, 1) pair for future reduction.
       val hashTagPairs = hashTags.map(hashtag => ("#" + hashtag.getText, 1))
+      
       // Use reduceByKeyAndWindow to reduce our hashtag pairs by summing their
       // counts over the last 10 seconds of batch intervals (in this case, 2 RDDs).
-      val topCounts10 = hashTagPairs.reduceByKeyAndWindow((l, r) => {l + r}, Seconds(10))
+      val topCounts10 = hashTagPairs.reduceByKeyAndWindow((l, r) => {l + r}, Seconds(20))
       
       // topCounts10 will provide a new RDD for every window. Calling transform()
       // on each of these RDDs gives us a per-window transformation. We use
@@ -104,11 +111,12 @@ object Twitter {
       rdd.sortBy(hashtagPair => hashtagPair._2, false))
   
       // Print popular hashtags.
-      sortedTopCounts10.foreachRDD(rdd => {
-        val topList = rdd.take(10)
-        println("\nPopular topics in last 10 seconds (%s total):".format(rdd.count()))
+      sortedTopCounts10.foreachRDD((rdd,time) => {
+        val topList = rdd.take(5)
+        println("\n5 most popular hashtags in last 20 seconds (total tweets in last 20 seconds: %s):".format(rdd.count()))
         topList.foreach{case (tag, count) => println("%s (%d tweets)".format(tag, count))}
       })
+
       
     }
     
@@ -132,8 +140,9 @@ object Twitter {
     }
 */
     ssc.start()
-    ssc.awaitTerminationOrTimeout(40000)
-    //ssc.stop()
+    //ssc.awaitTermination()
+    ssc.awaitTerminationOrTimeout(20000)
+    ssc.stop()
     
   }
 }
