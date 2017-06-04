@@ -18,22 +18,6 @@ object Twitter {
   def main(args: Array[String]) {
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
-
-    //connectToDB()
-    
-    def connectToDB(): Boolean = {
-      //Herstellen einer Verbindung zur Datenbank
-      val url = "jdbc:mysql://127.0.0.1:3306/twitter"
-      val user = "admin"
-      val pw = "admin"
-  
-      val con = DriverManager.getConnection(url, user, pw)
-      if (con != null) {
-        println("Verbindung zur Datenbank erfolgreich")
-        return true;
-      }
-      return false;
-    }
     
     //Initializieren von Spark
     val sparkConf = new SparkConf().setAppName("TwitterStreaming").setMaster("local[4]")
@@ -50,21 +34,29 @@ object Twitter {
     System.setProperty("twitter4j.oauth.accessToken", accessToken)
     System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
 
-    //Filter für die Tweets: Folgende Hahstags müssen enthalten sein
-    val filters = Array("Samsung")
-    val stream = TwitterUtils.createStream(ssc, None)
+    //Filter für die Tweets: Folgende Wörter müssen enthalten sein
+    val filters = Array("love")
     
-    val startTime = System.currentTimeMillis
+    //Aufruf der Analyse Funktion
     
-    //Hier folgt Analyse der Tweets
+    //numberOfTweets(ssc, filters)
+    //tweetLength(ssc, filters)
+    //mostPopularHashTags(ssc, 20, 5)
+    getFollowerOfAuhors(ssc, filters)
+    //saveTweetAuthorsToDB(ssc, filters)
     
-    //numberOfTweets()
-    //tweetLength()
-    mostPopularHashTags()
+    ssc.start()
+    //ssc.awaitTermination()
+    ssc.awaitTerminationOrTimeout(20000)
+    ssc.stop()
     
+   }
   
     //Anzahl der Tweets in einem bestimmen Zeitraum zu einem bestimmten Thema
-    def numberOfTweets() = {
+    def numberOfTweets(ssc: StreamingContext, filters: Array[String]) = {
+      val stream = TwitterUtils.createStream(ssc, None, filters)
+      val startTime = System.currentTimeMillis
+      
       val tweets = stream.foreachRDD {
         (rdd, time) =>
           var number = rdd.count
@@ -74,8 +66,11 @@ object Twitter {
     }
     
     //Ausgabe der durchschnittlichen Länge der Tweets zu einem bestimmten Zeitraum
-    def tweetLength() = {  
+    def tweetLength(ssc: StreamingContext, filters: Array[String]) = {  
       var averageTweetLength = 0
+      val stream = TwitterUtils.createStream(ssc, None, filters)
+      val startTime = System.currentTimeMillis
+      
       val tweets = stream.foreachRDD {
         (rdd, time) =>
            for (tuple <- rdd) {
@@ -94,14 +89,15 @@ object Twitter {
     }
     
     //Beliebtesten Hashtags über einen Zeitraum
-    def mostPopularHashTags() = {
+    def mostPopularHashTags(ssc: StreamingContext, seconds: Int, size: Int) = {
+      val stream = TwitterUtils.createStream(ssc, None)
       val hashTags = stream.flatMap(status => status.getHashtagEntities)
       // Convert hashtag to (hashtag, 1) pair for future reduction.
       val hashTagPairs = hashTags.map(hashtag => ("#" + hashtag.getText, 1))
       
       // Use reduceByKeyAndWindow to reduce our hashtag pairs by summing their
       // counts over the last 10 seconds of batch intervals (in this case, 2 RDDs).
-      val topCounts10 = hashTagPairs.reduceByKeyAndWindow((l, r) => {l + r}, Seconds(20))
+      val topCounts10 = hashTagPairs.reduceByKeyAndWindow((l, r) => {l + r}, Seconds(seconds))
       
       // topCounts10 will provide a new RDD for every window. Calling transform()
       // on each of these RDDs gives us a per-window transformation. We use
@@ -112,8 +108,8 @@ object Twitter {
   
       // Print popular hashtags.
       sortedTopCounts10.foreachRDD((rdd,time) => {
-        val topList = rdd.take(5)
-        println("\n5 most popular hashtags in last 20 seconds (total tweets in last 20 seconds: %s):".format(rdd.count()))
+        val topList = rdd.take(size)
+        println("\n"+size+" most popular hashtags in last "+seconds+" seconds (total tweets in last 20 seconds: %s):".format(rdd.count()))
         topList.foreach{case (tag, count) => println("%s (%d tweets)".format(tag, count))}
       })
 
@@ -122,27 +118,45 @@ object Twitter {
     
     //Analyse der Tweets auf Freundlichkeit (Wörter zählen)  
     
-    
-/*
-    //Speichern der Tweet Autoren in der Datenbank
-    val tweets = stream.foreachRDD {
-      rdd =>
-        rdd.foreachPartition {
-          it =>
-            val conn = DriverManager.getConnection(url, user, pw)
-            val del = conn.prepareStatement("INSERT INTO twitter (user) VALUES (?)")
-            for (tuple <- it) {
-              del.setString(1, tuple.getUser.getName)
-              del.executeUpdate
-            }
-            conn.close()
-        }
+    //Anzahl der Follower jedes Tweetautoren
+    def getFollowerOfAuhors(ssc: StreamingContext, filters: Array[String]) = {
+      val stream = TwitterUtils.createStream(ssc, None, filters)
+      val tweets = stream.foreachRDD {
+        (rdd, time) =>
+           for (tuple <- rdd) {
+             println("User: "+tuple.getUser.getName+" | Number of Follower: "+tuple.getUser.getFollowersCount);
+             //println("-------------------------------------------------");
+           }
+      }
     }
-*/
-    ssc.start()
-    //ssc.awaitTermination()
-    ssc.awaitTerminationOrTimeout(20000)
-    ssc.stop()
     
-  }
+    def saveTweetAuthorsToDB(ssc: StreamingContext, filters: Array[String]) = {
+       //Herstellen einer Verbindung zur Datenbank
+      val url = "jdbc:mysql://127.0.0.1:3306/twitter"
+      val user = "admin"
+      val pw = "admin"
+  
+      val con = DriverManager.getConnection(url, user, pw)
+      if (con != null) {
+        println("Verbindung zur Datenbank erfolgreich")
+      }else{
+        println("Verbindung zur Datenbank nicht erfolgreich")
+      }
+      
+      val stream = TwitterUtils.createStream(ssc, None, filters)
+      val tweets = stream.foreachRDD {
+        rdd =>
+          rdd.foreachPartition {
+            it =>
+              val conn = DriverManager.getConnection(url, user, pw)
+              val del = conn.prepareStatement("INSERT INTO twitter (user) VALUES (?)")
+              for (tuple <- it) {
+                del.setString(1, tuple.getUser.getName)
+                del.executeUpdate
+              }
+              conn.close()
+          }
+      }
+     }
+       
 }
