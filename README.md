@@ -8,6 +8,7 @@ Die Anwendung [Twitter.scala](https://github.com/lucasschaetzlein/ApacheSpark/bl
 1. Anzahl der abgesetzten Tweets
 2. Durchschnittliche Zeichenlänge der abgesetzten Tweets 
 3. Die beliebtesten Hashtags der letzten abgesetzten Tweets
+4. Speichern der Autoren der abgesetzten Tweets in einer Datenbank
 
 Es besteht die Möglichkeit die Ergebnisse in einer Datenbank zu speichern. Die Datenbank läuft in einem Docker Container und muss vor dem Start der Anwendung gestartet werden.
 
@@ -24,7 +25,7 @@ ggf: `docker network create local`
 
 ## GraphX
 
-Die Anwendung [FlightData.scala](https://github.com/lucasschaetzlein/ApacheSpark/blob/master/GraphX/src/FlightData.scala) baut anhand von Daten über Flughäfen und Flugrouten einen Graphen auf. Nachdem der Graph generiert wurde kann dieser analysiert werden. Folgende Methoden zur Analyse werden durch die Anwendung bereitgestellt.
+Die Anwendung [FlightData.scala](https://github.com/lucasschaetzlein/ApacheSpark/blob/master/GraphX/src/FlightData.scala) baut anhand von Daten über Flughäfen und Flugrouten einen Graphen auf. Dabei werden Daten von Januar 2016 verwendet. Nachdem der Graph generiert wurde kann dieser analysiert werden. Folgende Methoden zur Analyse werden durch die Anwendung bereitgestellt.
 
 1. Anzahl der Flughäfen
 2. Anzahl der Flüge zwischen zwei Flughäfen
