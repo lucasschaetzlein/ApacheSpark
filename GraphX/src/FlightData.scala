@@ -10,6 +10,13 @@ object FlightData {
 
   case class Flight(OriginID: Long, Origin: String, DestID: Long, Dest: String, Distance: Double)
   
+    //Einlesen des CSV-Files
+  def readCsv(sc: SparkContext): RDD[String] = {
+    val textRDD = sc.textFile("../GraphX/ressource/FlugDaten.csv")
+    return textRDD
+  }  
+  
+  //Umwandeln des RDD Objektes in ein Flight Objekt
   def parseFlight(str: String): Flight = {
     val line = str.split(",")
     Flight(line(0).toLong, line(1), line(2).toLong, line(3), line(4).toDouble)
@@ -22,6 +29,7 @@ object FlightData {
     //Erstellen der Knoten und Kanten RDDs
     val airports = flightsRDD.map(flight => (flight.OriginID.toLong, flight.Origin)).distinct()
     val routes = flightsRDD.map(flight => ((flight.OriginID, flight.DestID), flight.Distance)).distinct()
+    
 
     //routes.collect().foreach(println)
 
@@ -31,15 +39,38 @@ object FlightData {
 
     val graph = Graph(airports, flightEdges, defaultAirport)
     
-    println(graph.numEdges)
+    println(graph.numVertices)
     return graph
   }
 
+  //Anwenden des Connected Components Algorithmus, um die verbundenen Komponenten herauszufinden
   def connectedComponents(graph: Graph[String, Double]) = {
+    
+    //Connected Components auf dem Graphen ausführen
     val ccGraph = graph.connectedComponents().vertices
     println("-----------------")
-    val temp = graph.vertices.join(ccGraph)
+    
+    //Zusammenführen der Ergenisse mit den Knoten (Flughäfen), um die 3-Letter-Codes zu bekommen
+    val temp = graph.vertices.join(ccGraph).map{
+      case(id, (origin, cc)) => ("Flughafen: " + origin, " Kleinste Id: " + cc)
+    }
     temp.collect().foreach(println)
+  }
+  
+    //Anwenden des Triangle Counting Algortihmus, um die n Flughäfen mit dem höchsten Verkehrsaufkommen zu finden
+  def triangleCounting(graph: Graph[String, Double], n: Int) = {
+
+    //Triangle Counting auf dem Graphen ausführen
+    val ranks = graph.triangleCount().vertices
+
+    //Zusammenführen der Ergenisse mit den Knoten (Flughäfen), um die 3-Letter-Codes zu bekommen
+    val temp = ranks.join(graph.vertices)
+
+    //Sortieren der Ergebnisse
+    val temp2 = temp.sortBy(_._2._1, false)
+    
+    println("Die " + n + " Flughäfen mit den höchsten Verkehrsaufkommen")
+    temp2.take(n).foreach(println)
   }
 
   //Anwenden des PageRank Algortihmus, um die n Flughäfen mit dem höchsten Verkehrsaufkommen zu finden
@@ -53,15 +84,12 @@ object FlightData {
 
     //Sortieren der Ergebnisse
     val temp2 = temp.sortBy(_._2._1, false)
+    
     println("Die " + n + " Flughäfen mit den höchsten Verkehrsaufkommen")
     temp2.take(n).foreach(println)
   }
 
-  //Einlesen des CSV-Files
-  def readCsv(sc: SparkContext): RDD[String] = {
-    val textRDD = sc.textFile("../GraphX/ressource/FlugDaten.csv")
-    return textRDD
-  }
+
 
   //Listet die n längsten Routen auf
   def longestRoutes(graph: Graph[String, Double], n:Int) = {
@@ -87,8 +115,10 @@ object FlightData {
     val textRDD = readCsv(sc)
     val graph = createGraph(textRDD)
 //    longestRoutes(graph, 100)
-    pageRank(graph, 100)
-    listEdges(graph)
+//    pageRank(graph, 10)
+//    listEdges(graph)
+    connectedComponents(graph)
+//    triangleCounting(graph)
 
   }
 }

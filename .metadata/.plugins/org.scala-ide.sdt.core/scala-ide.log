@@ -2293,3 +2293,713 @@ when weaving
 2017-06-05 23:15:42,828  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
 2017-06-05 23:15:43,832  WARN [Worker-57] - ScalaProject - Project GraphX has platform default sourceLevel.
 2017-06-05 23:15:43,833  WARN [Worker-57] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-06 11:36:31,877 ERROR [main] - System.err - [org.eclipse.jdt.launching] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.launching.JavaRuntime
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-06 11:36:33,997  WARN [main] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-06 11:36:33,998  WARN [main] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-06 11:36:34,180  WARN [main] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-06 11:36:34,181  WARN [main] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-06 11:36:44,527 ERROR [main] - System.err - [org.eclipse.jdt.debug.ui] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-06 11:36:44,704 ERROR [main] - System.err - [org.eclipse.jdt.debug] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.debug.core.IJavaHotCodeReplaceListener
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-06 11:36:47,704  WARN [Worker-8] - ScalaProject - Project SparkStreaming has platform default sourceLevel.
+2017-06-06 11:36:47,707  WARN [Worker-8] - ScalaProject - Project SparkStreaming runs on platform default installation.
+2017-06-06 11:36:48,971  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-06 11:43:58,522 ERROR [main] - System.err - [org.eclipse.jdt.junit] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.junit.ui.JUnitQuickFixProcessor
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-06 11:44:03,847  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-06 11:44:54,018  WARN [Worker-14] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-06 11:44:54,019  WARN [Worker-14] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-06 11:44:54,128  WARN [Worker-14] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-06 11:44:54,129  WARN [Worker-14] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-06 11:46:49,130  WARN [Worker-12] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-06 11:46:49,134  WARN [Worker-12] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-06 11:49:46,805  WARN [Worker-15] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-06 11:49:46,807  WARN [Worker-15] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:18:08,936 ERROR [main] - System.err - [org.eclipse.jdt.launching] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.launching.JavaRuntime
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-08 23:18:11,012  WARN [main] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-08 23:18:11,013  WARN [main] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:18:11,217  WARN [main] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-08 23:18:11,218  WARN [main] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:18:26,048 ERROR [main] - System.err - [org.eclipse.jdt.debug.ui] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.debug.ui.actions.ToggleBreakpointAdapter
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-08 23:18:26,230 ERROR [main] - System.err - [org.eclipse.jdt.debug] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.debug.core.IJavaHotCodeReplaceListener
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-08 23:18:27,896  WARN [Worker-7] - ScalaProject - Project SparkStreaming has platform default sourceLevel.
+2017-06-08 23:18:27,901  WARN [Worker-7] - ScalaProject - Project SparkStreaming runs on platform default installation.
+2017-06-08 23:36:47,959 ERROR [main] - System.err - [org.eclipse.jdt.junit] error can't determine modifiers of missing type org.eclipse.pde.internal.ui.wizards.imports.PluginImportHelper
+when weaving type org.eclipse.jdt.internal.junit.ui.JUnitQuickFixProcessor
+when weaving classes 
+when weaving 
+ [Xlint:cantFindType]
+2017-06-08 23:36:48,547  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-08 23:36:54,240  WARN [Worker-70] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-08 23:36:54,240  WARN [Worker-70] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:36:54,378  WARN [Worker-70] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-08 23:36:54,379  WARN [Worker-70] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:43:25,540  WARN [Worker-10] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-08 23:43:25,542  WARN [Worker-10] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:43:46,338  WARN [Worker-70] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-08 23:43:46,339  WARN [Worker-70] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:43:50,140  WARN [Worker-55] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-08 23:43:50,140  WARN [Worker-55] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-08 23:43:53,306  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 00:45:05,823  WARN [Worker-90] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 00:45:05,826  WARN [Worker-90] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 00:45:41,672  WARN [Worker-70] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 00:45:41,674  WARN [Worker-70] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 01:00:04,498  WARN [Worker-90] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 01:00:04,500  WARN [Worker-90] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 01:02:59,845 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 01:03:00,014 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 01:03:00,014 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 01:03:00,015 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 01:03:19,045  WARN [Worker-70] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 01:03:19,045  WARN [Worker-70] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 01:03:42,761  WARN [Worker-70] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 01:03:42,763  WARN [Worker-70] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:04:49,399  WARN [Worker-92] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:04:49,402  WARN [Worker-92] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:05:04,287  WARN [Worker-96] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:05:04,287  WARN [Worker-96] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:05:56,757  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 14:06:05,726  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 14:06:10,323  WARN [Worker-101] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:06:10,324  WARN [Worker-101] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:08:26,301  WARN [Worker-102] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:08:26,301  WARN [Worker-102] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:12:15,321 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:708)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.getTypedTreeAt(Global.scala:842)
+	at scala.tools.nsc.interactive.CompilerControl$AskTypeAtItem.apply$mcV$sp(CompilerControl.scala:333)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:506)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:431)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:520)
+	at scala.tools.nsc.interactive.Global.signalParseProgress(Global.scala:331)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefRest(Parsers.scala:2670)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefOrDcl(Parsers.scala:2627)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.defOrDcl(Parsers.scala:2512)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.nonLocalDefOrDcl(Parsers.scala:2524)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3082)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStats(Parsers.scala:3081)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3068)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStatSeq(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBody(Parsers.scala:2974)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBodyOpt(Parsers.scala:2981)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateOpt(Parsers.scala:2945)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.objectDef(Parsers.scala:2830)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.tmplDef(Parsers.scala:2766)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topLevelTmplDef(Parsers.scala:2747)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3030)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topStatSeq(Parsers.scala:3029)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.topstats$1(Parsers.scala:3227)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3233)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.compilationUnit(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parseRule(Parsers.scala:345)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parse(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$UnitParser.smartParse(Parsers.scala:241)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer.scala$tools$nsc$ast$parser$SyntaxAnalyzer$$initialUnitBody(SyntaxAnalyzer.scala:87)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer$ParserPhase.apply(SyntaxAnalyzer.scala:99)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:440)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:431)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:440)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.reflect.internal.SymbolTable.enteringPhase(SymbolTable.scala:235)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1608)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.tools.nsc.Global$Run.compileLate(Global.scala:1608)
+	at scala.tools.nsc.interactive.Global.scala$tools$nsc$interactive$Global$$parseAndEnter(Global.scala:658)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:564)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+2017-06-09 14:12:17,534 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:708)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.getTypedTreeAt(Global.scala:842)
+	at scala.tools.nsc.interactive.CompilerControl$AskTypeAtItem.apply$mcV$sp(CompilerControl.scala:333)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:506)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:431)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:520)
+	at scala.tools.nsc.interactive.Global.signalParseProgress(Global.scala:331)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefRest(Parsers.scala:2670)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefOrDcl(Parsers.scala:2627)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.defOrDcl(Parsers.scala:2512)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.nonLocalDefOrDcl(Parsers.scala:2524)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3082)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStats(Parsers.scala:3081)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3068)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStatSeq(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBody(Parsers.scala:2974)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBodyOpt(Parsers.scala:2981)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateOpt(Parsers.scala:2945)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.objectDef(Parsers.scala:2830)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.tmplDef(Parsers.scala:2766)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topLevelTmplDef(Parsers.scala:2747)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3030)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topStatSeq(Parsers.scala:3029)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.topstats$1(Parsers.scala:3227)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3233)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.compilationUnit(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parseRule(Parsers.scala:345)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parse(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$UnitParser.smartParse(Parsers.scala:241)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer.scala$tools$nsc$ast$parser$SyntaxAnalyzer$$initialUnitBody(SyntaxAnalyzer.scala:87)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer$ParserPhase.apply(SyntaxAnalyzer.scala:99)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:440)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:431)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:440)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.reflect.internal.SymbolTable.enteringPhase(SymbolTable.scala:235)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1608)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.tools.nsc.Global$Run.compileLate(Global.scala:1608)
+	at scala.tools.nsc.interactive.Global.scala$tools$nsc$interactive$Global$$parseAndEnter(Global.scala:658)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:564)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+2017-06-09 14:12:19,442 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:708)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.getTypedTreeAt(Global.scala:842)
+	at scala.tools.nsc.interactive.CompilerControl$AskTypeAtItem.apply$mcV$sp(CompilerControl.scala:333)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:506)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:431)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:520)
+	at scala.tools.nsc.interactive.Global.signalDone(Global.scala:361)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5418)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5517)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedHigherKindedType(Typers.scala:5524)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$112.apply(Typers.scala:4958)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$112.apply(Typers.scala:4947)
+	at scala.reflect.internal.util.Collections$class.loop$2(Collections.scala:100)
+	at scala.reflect.internal.util.Collections$class.map2Conserve(Collections.scala:118)
+	at scala.reflect.internal.SymbolTable.map2Conserve(SymbolTable.scala:16)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedAppliedTypeTree$1(Typers.scala:4947)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTypTree$1(Typers.scala:5296)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5357)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5517)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5520)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDefImpl(Typers.scala:1967)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDef(Typers.scala:1958)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35$$anonfun$apply$21.apply(Typers.scala:2181)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35$$anonfun$apply$21.apply(Typers.scala:2181)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35.apply(Typers.scala:2181)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35.apply(Typers.scala:2181)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedDefDef(Typers.scala:2181)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5308)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5359)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5452)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedStat$1(Typers.scala:3047)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1921)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1808)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5310)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5359)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5452)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedStat$1(Typers.scala:3047)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5015)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5312)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5359)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5448)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$$anon$3.apply(Analyzer.scala:102)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:440)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:431)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:440)
+	at scala.tools.nsc.interactive.Global$TyperRun$$anonfun$applyPhase$1.apply(Global.scala:1338)
+	at scala.tools.nsc.interactive.Global$TyperRun$$anonfun$applyPhase$1.apply(Global.scala:1338)
+	at scala.reflect.internal.SymbolTable.enteringPhase(SymbolTable.scala:235)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1338)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1331)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:670)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5$$anonfun$apply$8.apply(Global.scala:585)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5.apply(Global.scala:581)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5.apply(Global.scala:581)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:581)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+2017-06-09 14:13:28,220  WARN [Worker-95] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:13:28,220  WARN [Worker-95] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:13:35,655  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 14:13:41,610  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 14:13:57,863  WARN [Worker-99] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:13:57,863  WARN [Worker-99] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:14:25,574  WARN [Worker-102] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:14:25,574  WARN [Worker-102] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:15:34,041  WARN [Worker-102] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:15:34,044  WARN [Worker-102] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:20:12,277  WARN [Worker-95] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:20:12,277  WARN [Worker-95] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:22:55,407  WARN [Worker-102] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:22:55,407  WARN [Worker-102] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:25:34,280  WARN [Worker-95] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:25:34,282  WARN [Worker-95] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 14:25:40,438  WARN [Worker-102] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 14:25:40,438  WARN [Worker-102] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:01:26,973  WARN [Worker-107] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:01:26,977  WARN [Worker-107] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:05:34,386 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:708)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.getTypedTreeAt(Global.scala:842)
+	at scala.tools.nsc.interactive.CompilerControl$AskTypeAtItem.apply$mcV$sp(CompilerControl.scala:333)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:506)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:431)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:520)
+	at scala.tools.nsc.interactive.Global.signalParseProgress(Global.scala:331)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefRest(Parsers.scala:2670)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefOrDcl(Parsers.scala:2627)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.defOrDcl(Parsers.scala:2512)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.nonLocalDefOrDcl(Parsers.scala:2524)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3082)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStats(Parsers.scala:3081)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3068)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStatSeq(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBody(Parsers.scala:2974)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBodyOpt(Parsers.scala:2981)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateOpt(Parsers.scala:2945)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.objectDef(Parsers.scala:2830)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.tmplDef(Parsers.scala:2766)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topLevelTmplDef(Parsers.scala:2747)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3030)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topStatSeq(Parsers.scala:3029)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.topstats$1(Parsers.scala:3227)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3233)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.compilationUnit(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parseRule(Parsers.scala:345)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parse(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$UnitParser.smartParse(Parsers.scala:241)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer.scala$tools$nsc$ast$parser$SyntaxAnalyzer$$initialUnitBody(SyntaxAnalyzer.scala:87)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer$ParserPhase.apply(SyntaxAnalyzer.scala:99)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:440)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:431)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:440)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.reflect.internal.SymbolTable.enteringPhase(SymbolTable.scala:235)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1608)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.tools.nsc.Global$Run.compileLate(Global.scala:1608)
+	at scala.tools.nsc.interactive.Global.scala$tools$nsc$interactive$Global$$parseAndEnter(Global.scala:658)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:564)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+2017-06-09 17:05:43,046 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:708)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.getTypedTreeAt(Global.scala:842)
+	at scala.tools.nsc.interactive.CompilerControl$AskTypeAtItem.apply$mcV$sp(CompilerControl.scala:333)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:506)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:431)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:520)
+	at scala.tools.nsc.interactive.Global.signalParseProgress(Global.scala:331)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefRest(Parsers.scala:2670)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.funDefOrDcl(Parsers.scala:2627)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.defOrDcl(Parsers.scala:2512)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.nonLocalDefOrDcl(Parsers.scala:2524)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1$$anonfun$applyOrElse$3.apply(Parsers.scala:3087)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3087)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStat$1.applyOrElse(Parsers.scala:3082)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStats(Parsers.scala:3081)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3068)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$templateStatSeq$1.apply(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateStatSeq(Parsers.scala:3045)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBody(Parsers.scala:2974)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateBodyOpt(Parsers.scala:2981)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.templateOpt(Parsers.scala:2945)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.objectDef(Parsers.scala:2830)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.tmplDef(Parsers.scala:2766)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topLevelTmplDef(Parsers.scala:2747)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1$$anonfun$applyOrElse$2.apply(Parsers.scala:3037)
+	at scala.tools.nsc.doc.ScaladocSyntaxAnalyzer$ScaladocUnitParser.joinComment(ScaladocAnalyzer.scala:259)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3037)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$topStat$1.applyOrElse(Parsers.scala:3030)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.statSeq(Parsers.scala:3014)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.topStatSeq(Parsers.scala:3029)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.topstats$1(Parsers.scala:3227)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3233)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$compilationUnit$1.apply(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.checkNoEscapingPlaceholders(Parsers.scala:462)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.compilationUnit(Parsers.scala:3195)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$SourceFileParser$$anonfun$parseStartRule$1.apply(Parsers.scala:146)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser$$anonfun$parse$1.apply(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parseRule(Parsers.scala:345)
+	at scala.tools.nsc.ast.parser.Parsers$Parser.parse(Parsers.scala:352)
+	at scala.tools.nsc.ast.parser.Parsers$UnitParser.smartParse(Parsers.scala:241)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer.scala$tools$nsc$ast$parser$SyntaxAnalyzer$$initialUnitBody(SyntaxAnalyzer.scala:87)
+	at scala.tools.nsc.ast.parser.SyntaxAnalyzer$ParserPhase.apply(SyntaxAnalyzer.scala:99)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:440)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:431)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:440)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2$$anonfun$apply$1.apply(Global.scala:1609)
+	at scala.reflect.internal.SymbolTable.enteringPhase(SymbolTable.scala:235)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1609)
+	at scala.tools.nsc.Global$Run$$anonfun$compileLate$2.apply(Global.scala:1608)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.tools.nsc.Global$Run.compileLate(Global.scala:1608)
+	at scala.tools.nsc.interactive.Global.scala$tools$nsc$interactive$Global$$parseAndEnter(Global.scala:658)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:564)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+2017-06-09 17:05:45,916 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$getTypedTreeAt$1.apply(Global.scala:842)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global$$anonfun$respond$1.apply(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:708)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:701)
+	at scala.tools.nsc.interactive.Global.getTypedTreeAt(Global.scala:842)
+	at scala.tools.nsc.interactive.CompilerControl$AskTypeAtItem.apply$mcV$sp(CompilerControl.scala:333)
+	at scala.tools.nsc.interactive.Global$$anonfun$pollForWork$1.apply$mcV$sp(Global.scala:506)
+	at scala.util.control.Breaks.breakable(Breaks.scala:38)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:431)
+	at scala.tools.nsc.interactive.Global.checkForMoreWork(Global.scala:520)
+	at scala.tools.nsc.interactive.Global.signalDone(Global.scala:361)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5418)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5517)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedHigherKindedType(Typers.scala:5524)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$112.apply(Typers.scala:4958)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$112.apply(Typers.scala:4947)
+	at scala.reflect.internal.util.Collections$class.loop$2(Collections.scala:100)
+	at scala.reflect.internal.util.Collections$class.map2Conserve(Collections.scala:118)
+	at scala.reflect.internal.SymbolTable.map2Conserve(SymbolTable.scala:16)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedAppliedTypeTree$1(Typers.scala:4947)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTypTree$1(Typers.scala:5296)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5357)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5517)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedType(Typers.scala:5520)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDefImpl(Typers.scala:1967)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedValDef(Typers.scala:1958)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35$$anonfun$apply$21.apply(Typers.scala:2181)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35$$anonfun$apply$21.apply(Typers.scala:2181)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35.apply(Typers.scala:2181)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$35.apply(Typers.scala:2181)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedDefDef(Typers.scala:2181)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5308)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5359)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5452)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedStat$1(Typers.scala:3047)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedTemplate(Typers.scala:1921)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedModuleDef(Typers.scala:1808)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5310)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5359)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedByValueExpr(Typers.scala:5452)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedStat$1(Typers.scala:3047)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer$$anonfun$65.apply(Typers.scala:3151)
+	at scala.collection.immutable.List.loop$1(List.scala:173)
+	at scala.collection.immutable.List.mapConserve(List.scala:189)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedStats(Typers.scala:3151)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedPackageDef$1(Typers.scala:5015)
+	at scala.tools.nsc.typechecker.Typers$Typer.typedMemberDef$1(Typers.scala:5312)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed1(Typers.scala:5359)
+	at scala.tools.nsc.typechecker.Typers$Typer.runTyper$1(Typers.scala:5396)
+	at scala.tools.nsc.typechecker.Typers$Typer.scala$tools$nsc$typechecker$Typers$Typer$$typedInternal(Typers.scala:5423)
+	at scala.tools.nsc.typechecker.Typers$Typer.body$2(Typers.scala:5370)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5374)
+	at scala.tools.nsc.typechecker.Typers$Typer.typed(Typers.scala:5448)
+	at scala.tools.nsc.typechecker.Analyzer$typerFactory$$anon$3.apply(Analyzer.scala:102)
+	at scala.tools.nsc.Global$GlobalPhase$$anonfun$applyPhase$1.apply$mcV$sp(Global.scala:440)
+	at scala.tools.nsc.Global$GlobalPhase.withCurrentUnit(Global.scala:431)
+	at scala.tools.nsc.Global$GlobalPhase.applyPhase(Global.scala:440)
+	at scala.tools.nsc.interactive.Global$TyperRun$$anonfun$applyPhase$1.apply(Global.scala:1338)
+	at scala.tools.nsc.interactive.Global$TyperRun$$anonfun$applyPhase$1.apply(Global.scala:1338)
+	at scala.reflect.internal.SymbolTable.enteringPhase(SymbolTable.scala:235)
+	at scala.tools.nsc.interactive.Global$TyperRun.applyPhase(Global.scala:1338)
+	at scala.tools.nsc.interactive.Global$TyperRun.typeCheck(Global.scala:1331)
+	at scala.tools.nsc.interactive.Global.typeCheck(Global.scala:670)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5$$anonfun$apply$8.apply(Global.scala:585)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5.apply(Global.scala:581)
+	at scala.tools.nsc.interactive.Global$$anonfun$backgroundCompile$5.apply(Global.scala:581)
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:733)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:732)
+	at scala.tools.nsc.interactive.Global.backgroundCompile(Global.scala:581)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:25)
+2017-06-09 17:06:38,140  WARN [Worker-104] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:06:38,140  WARN [Worker-104] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:07:12,004  WARN [Worker-106] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:07:12,004  WARN [Worker-106] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:07:15,869  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 17:07:16,073  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 17:08:54,593  WARN [Worker-104] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:08:54,593  WARN [Worker-104] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:09:30,534  WARN [Worker-96] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:09:30,534  WARN [Worker-96] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:13:40,679  WARN [Worker-107] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:13:40,681  WARN [Worker-107] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:16:19,572  WARN [Worker-104] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:16:19,572  WARN [Worker-104] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 17:17:29,094  WARN [Worker-104] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 17:17:29,094  WARN [Worker-104] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:32:12,726 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 20:32:14,151  WARN [Worker-104] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:32:14,151  WARN [Worker-104] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:34:17,112  WARN [Worker-112] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:34:17,115  WARN [Worker-112] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:47:16,443  WARN [Worker-118] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:47:16,445  WARN [Worker-118] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:47:21,302  WARN [Worker-120] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:47:21,302  WARN [Worker-120] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:47:39,020  WARN [Worker-119] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:47:39,020  WARN [Worker-119] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:48:14,896  WARN [Worker-121] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:48:14,896  WARN [Worker-121] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:48:27,143  WARN [Worker-113] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:48:27,144  WARN [Worker-113] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:48:44,099  WARN [Worker-112] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:48:44,099  WARN [Worker-112] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:48:58,656  WARN [Worker-122] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:48:58,657  WARN [Worker-122] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:49:14,055 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 20:49:14,056 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 20:49:14,056 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 20:49:18,027  WARN [Worker-123] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:49:18,027  WARN [Worker-123] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:50:26,708  WARN [Worker-121] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:50:26,710  WARN [Worker-121] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:50:49,403  WARN [Worker-113] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:50:49,406  WARN [Worker-113] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:51:02,105  WARN [Worker-120] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:51:02,106  WARN [Worker-120] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:51:10,729  WARN [Worker-112] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:51:10,729  WARN [Worker-112] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:55:20,865 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 20:55:20,867 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 20:55:20,867 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2017-06-09 20:55:30,087  WARN [Worker-121] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:55:30,087  WARN [Worker-121] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-09 20:55:56,514  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2017-06-09 20:56:52,667  WARN [Worker-124] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-09 20:56:52,667  WARN [Worker-124] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-10 18:06:10,020  WARN [Worker-172] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-10 18:06:10,023  WARN [Worker-172] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-10 18:06:36,780  WARN [Worker-170] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-10 18:06:36,783  WARN [Worker-170] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-10 18:06:59,279  WARN [Worker-177] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-10 18:06:59,282  WARN [Worker-177] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-10 18:31:58,454  WARN [Worker-179] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-10 18:31:58,456  WARN [Worker-179] - ScalaProject - Project GraphX runs on platform default installation.
+2017-06-10 18:33:26,293  WARN [Worker-173] - ScalaProject - Project GraphX has platform default sourceLevel.
+2017-06-10 18:33:26,295  WARN [Worker-173] - ScalaProject - Project GraphX runs on platform default installation.
