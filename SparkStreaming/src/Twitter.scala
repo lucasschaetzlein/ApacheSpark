@@ -12,17 +12,10 @@ import org.apache.log4j.Level
 import java.sql.{ Connection, DriverManager, ResultSet }
 
 object Twitter {
-   var tweetCount = 0;
-   var overallTweetLength = 0;
       
   def main(args: Array[String]) {
     Logger.getLogger("org").setLevel(Level.OFF)
     Logger.getLogger("akka").setLevel(Level.OFF)
-    
-    //Initializieren von Spark
-    val sparkConf = new SparkConf().setAppName("TwitterStreaming").setMaster("local[4]")
-    val sc = new SparkContext(sparkConf)
-    val ssc = new StreamingContext(sc, Seconds(1))
 
     //Twitter Credentials für die Verbindung zur Twitter API
     val consumerKey = "skEDCX0PnJ1iinYJHpKhkEPgl";
@@ -33,17 +26,26 @@ object Twitter {
     System.setProperty("twitter4j.oauth.consumerSecret", consumerSecret)
     System.setProperty("twitter4j.oauth.accessToken", accessToken)
     System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
+    
+    //Initializieren von Spark
+    val sparkConf = new SparkConf().setAppName("TwitterStreaming").setMaster("local[4]")
+    val sc = new SparkContext(sparkConf)
+    val ssc = new StreamingContext(sc, Seconds(1))
 
     //Filter für die Tweets: Folgende Wörter müssen enthalten sein
-    val filters = Array("love")
+    val filters1 = Array("obama")
+    val filters2 = Array("trump")
     
-    //Aufruf der Analyse Funktion
+    //Methoden für die Analyse der Daten
+    //numberOfTweets(ssc, filters1)
+    //numberOfTweets(ssc, filters2)
     
-    //numberOfTweets(ssc, filters)
-    //tweetLength(ssc, filters)
-    //mostPopularHashTags(ssc, 20, 5)
-    getFollowerOfAuhors(ssc, filters)
-    //saveTweetAuthorsToDB(ssc, filters)
+    //tweetLength(ssc, filters1)
+    
+    //getFollowerOfAuhors(ssc, filters1)
+    mostPopularHashTags(ssc, 20, 5)
+    
+    //saveTweetAuthorsToDB(ssc, filters1)
     
     ssc.start()
     //ssc.awaitTermination()
@@ -57,34 +59,36 @@ object Twitter {
       val stream = TwitterUtils.createStream(ssc, None, filters)
       val startTime = System.currentTimeMillis
       
+      var tweetCount = 0;
+      
       val tweets = stream.foreachRDD {
         (rdd, time) =>
           var number = rdd.count
           tweetCount += number.toInt
-          println("Number of Tweets of the last "+(time.milliseconds-startTime)/1000+" seconds: "+tweetCount);
+          println("Number of Tweets for \""+ filters.head +"\" of the last "+(time.milliseconds-startTime)/1000+" seconds: "+tweetCount);
       }
     }
-    
+          
+    var tweetCount = 0
+    var overallTweetLength = 0
+    var averageTweetLength = 0
+      
     //Ausgabe der durchschnittlichen Länge der Tweets zu einem bestimmten Zeitraum
     def tweetLength(ssc: StreamingContext, filters: Array[String]) = {  
-      var averageTweetLength = 0
       val stream = TwitterUtils.createStream(ssc, None, filters)
       val startTime = System.currentTimeMillis
-      
+
       val tweets = stream.foreachRDD {
         (rdd, time) =>
            for (tuple <- rdd) {
              var tweetLength = tuple.getText.length
              overallTweetLength += tweetLength;
              tweetCount += 1;
-             //println(tuple.getUser.getName+" | "+tweetLength);
-             //println("Durchschnittliche Länge der Tweets: "+overallTweetLength/tweetCount+" <== Gesamtlänge: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
-             //println("-------------------------------------------------");
            }
            if(tweetCount != 0){
              averageTweetLength = overallTweetLength/tweetCount
            }
-           println("Durchschnittliche Länge der Tweets nach "+(time.milliseconds-startTime)/1000+" Sekunden: "+averageTweetLength+" Zeichen | Gesamtlänge aller Tweets: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
+           println("Durchschnittliche Länge der Tweets für \""+ filters.head+"\" nach "+(time.milliseconds-startTime)/1000+" Sekunden: "+averageTweetLength+" Zeichen | Gesamtlänge aller Tweets: "+overallTweetLength+" | Anzahl der Tweets: "+tweetCount);
       }
     }
     
@@ -92,31 +96,23 @@ object Twitter {
     def mostPopularHashTags(ssc: StreamingContext, seconds: Int, size: Int) = {
       val stream = TwitterUtils.createStream(ssc, None)
       val hashTags = stream.flatMap(status => status.getHashtagEntities)
-      // Convert hashtag to (hashtag, 1) pair for future reduction.
+    
+      // Umwandeln der Hashtags in ein Key-Value Paar (hashtag, 1) 
       val hashTagPairs = hashTags.map(hashtag => ("#" + hashtag.getText, 1))
-      
-      // Use reduceByKeyAndWindow to reduce our hashtag pairs by summing their
-      // counts over the last 10 seconds of batch intervals (in this case, 2 RDDs).
+    
+      //Summieren der Hashtag Paare der letzten x Sekunden
       val topCounts10 = hashTagPairs.reduceByKeyAndWindow((l, r) => {l + r}, Seconds(seconds))
-      
-      // topCounts10 will provide a new RDD for every window. Calling transform()
-      // on each of these RDDs gives us a per-window transformation. We use
-      // this transformation to sort each RDD by the hashtag counts. The FALSE
-      // flag tells the sortBy() function to sort in descending order.
-      val sortedTopCounts10 = topCounts10.transform(rdd => 
-      rdd.sortBy(hashtagPair => hashtagPair._2, false))
-  
-      // Print popular hashtags.
+    
+      // Sortieren der RDDs anhand der Anzahl der verschiedenen Hashtags
+      val sortedTopCounts10 = topCounts10.transform(rdd => rdd.sortBy(hashtagPair => hashtagPair._2, false))
+    
+      // Ausgabe der beliebtesten Hashtags
       sortedTopCounts10.foreachRDD((rdd,time) => {
         val topList = rdd.take(size)
-        println("\n"+size+" most popular hashtags in last "+seconds+" seconds (total tweets in last 20 seconds: %s):".format(rdd.count()))
+        println("\n"+size+" most popular hashtags in last "+seconds+" seconds (total tweets in last "+seconds+" seconds: %s):".format(rdd.count()))
         topList.foreach{case (tag, count) => println("%s (%d tweets)".format(tag, count))}
-      })
-
-      
-    }
-    
-    //Analyse der Tweets auf Freundlichkeit (Wörter zählen)  
+      })  
+    } 
     
     //Anzahl der Follower jedes Tweetautoren
     def getFollowerOfAuhors(ssc: StreamingContext, filters: Array[String]) = {
@@ -125,7 +121,6 @@ object Twitter {
         (rdd, time) =>
            for (tuple <- rdd) {
              println("User: "+tuple.getUser.getName+" | Number of Follower: "+tuple.getUser.getFollowersCount);
-             //println("-------------------------------------------------");
            }
       }
     }
