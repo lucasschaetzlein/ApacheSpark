@@ -4,15 +4,15 @@ output mode:
 0 -> multiple
 output directories:
 1 items
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/bin
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src -> /Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/bin
 compile options:
 8 items
 0 -> -javabootclasspath
-1 -> /Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/System/Library/Java/Extensions/MRJToolkit.jar
+1 -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/System/Library/Java/Extensions/MRJToolkit.jar
 2 -> -javaextdirs
 3 ->  
 4 -> -bootclasspath
-5 -> /Users/nilsbuchmann/.p2/pool/plugins/org.scala-lang.scala-library_2.11.8.v20160304-115712-1706a37eb8.jar
+5 -> /Users/lucasschatzlein/.p2/pool/plugins/org.scala-lang.scala-library_2.11.8.v20160304-115712-1706a37eb8.jar
 6 -> -encoding
 7 -> UTF-8
 javac options:
@@ -27,7 +27,6 @@ name hashing:
 1 items
 0 -> false
 products:
-17 items
 /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/bin/Twitter$$anonfun$1.class
 /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/bin/Twitter$$anonfun$2.class
 /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/bin/Twitter$$anonfun$3$$anonfun$apply$1.class
@@ -47,13 +46,13 @@ products:
 /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/bin/Twitter.class
 binary dependencies:
 7 items
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/rt.jar
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/.p2/pool/plugins/org.scala-lang.scala-library_2.11.8.v20160304-115712-1706a37eb8.jar
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/apache-log4j-extras-1.2.17.jar
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/spark-core_2.11-2.0.1.jar
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/spark-streaming-twitter_2.11-1.6.2.jar
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/spark-streaming_2.11-2.0.1.jar
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/twitter4j-core-4.0.5.jar
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/lucasschatzlein/.p2/pool/plugins/org.scala-lang.scala-library_2.11.8.v20160304-115712-1706a37eb8.jar
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/apache-log4j-extras-1.2.17.jar
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/spark-core_2.11-2.0.1.jar
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/spark-streaming-twitter_2.11-1.6.2.jar
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/spark-streaming_2.11-2.0.1.jar
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> /Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/twitter4j-core-4.0.5.jar
 direct source dependencies:
 0 items
 direct external dependencies:
@@ -71,6 +70,7 @@ inheritance internal dependencies:
 inheritance external dependencies:
 0 items
 class names:
+
 17 items
 /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> Twitter
 /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> Twitter$
@@ -115,13 +115,13 @@ source stamps:
 /Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> hash(fe8d63e6a7a0cb469b7f488bfd4d62ee305a0064)
 binary stamps:
 7 items
-/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1450827058000)
-/Users/nilsbuchmann/.p2/pool/plugins/org.scala-lang.scala-library_2.11.8.v20160304-115712-1706a37eb8.jar -> lastModified(1493723395000)
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/apache-log4j-extras-1.2.17.jar -> lastModified(1493731868000)
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/spark-core_2.11-2.0.1.jar -> lastModified(1493731870000)
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/spark-streaming-twitter_2.11-1.6.2.jar -> lastModified(1493731870000)
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/spark-streaming_2.11-2.0.1.jar -> lastModified(1493731870000)
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/lib/twitter4j-core-4.0.5.jar -> lastModified(1493731870000)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1481605174000)
+/Users/lucasschatzlein/.p2/pool/plugins/org.scala-lang.scala-library_2.11.8.v20160304-115712-1706a37eb8.jar -> lastModified(1493383208000)
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/apache-log4j-extras-1.2.17.jar -> lastModified(1493731800000)
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/spark-core_2.11-2.0.1.jar -> lastModified(1493731806000)
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/spark-streaming-twitter_2.11-1.6.2.jar -> lastModified(1493731807000)
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/spark-streaming_2.11-2.0.1.jar -> lastModified(1493731807000)
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/lib/twitter4j-core-4.0.5.jar -> lastModified(1493731807000)
 class names:
 7 items
 /Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
@@ -139,7 +139,7 @@ external apis:
 0 items
 source infos:
 1 items
-/Users/nilsbuchmann/Documents/Eclipse_Projects/ApacheSpark/SparkStreaming/src/Twitter.scala -> 
+/Users/lucasschatzlein/Documents/workspace/ApacheSpark/SparkStreaming/src/Twitter.scala -> 
 AAAAAAAAAAA=
 compilations:
 234 items
